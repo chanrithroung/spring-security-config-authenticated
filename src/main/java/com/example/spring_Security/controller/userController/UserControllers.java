@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
+import java.util.Objects;
+
 @RestController
 //@RequestMapping("/user")
 public class UserControllers {
@@ -30,6 +32,12 @@ public class UserControllers {
         response.put("payload", userService.registerUser(userRequestDTO));
         return ResponseEntity.ok(response);
 
+    }
+
+
+    @PostMapping("/login")
+    public ResponseEntity<Object> login(@RequestBody UserRequestDTO requestDTO) {
+        return userService.verify(requestDTO);
     }
 
 }

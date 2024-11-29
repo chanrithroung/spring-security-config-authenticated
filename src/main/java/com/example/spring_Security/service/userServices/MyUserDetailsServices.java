@@ -4,6 +4,7 @@ package com.example.spring_Security.service.userServices;
 import com.example.spring_Security.model.UserModel.UserModel;
 import com.example.spring_Security.model.UserModel.UserPrincipal;
 import com.example.spring_Security.repository.UserRepository;
+import com.example.spring_Security.service.TokenService.JWTServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
